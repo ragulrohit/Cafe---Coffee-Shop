@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Log in to your STACKLY account to reach the admin dashboard — orders, menu management, customers, offers and analytics.">
+<meta name="theme-color" content="#241309">
+<title>Login — STACKLY Coffee Roasters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2542f'/%3E%3Cpath d='M8 12h13v5a6.5 6.5 0 0 1-13 0z' fill='%23fff'/%3E%3Cpath d='M21 13h2a2.5 2.5 0 0 1 0 5h-2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="auth">
+
+  <!-- ============ VISUAL SIDE ============ -->
+  <aside class="auth-visual">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=70" alt="A freshly poured filter coffee on a wooden counter" data-label="STACKLY Coffee">
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-3" aria-hidden="true"></span>
+    <div class="auth-quote">
+      <span class="eyebrow" style="color:#fff;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.28)">STACKLY Dashboard</span>
+      <h2>Every order, every bean, one screen.</h2>
+      <p>Manage the menu, track deliveries, keep offers current and read the analytics without opening six different tabs.</p>
+      <ul class="q-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Orders, menu, coffee, offers and customers</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Live charts built with plain canvas &mdash; no libraries</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Your session and account live only in this browser</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- ============ FORM SIDE ============ -->
+  <main class="auth-panel">
+    <div class="auth-topbar">
+      <a class="auth-home-link" href="index.html" aria-label="Back to home">&larr; Back to Home</a>
+    </div>
+
+    <div class="auth-panel-inner">
+      <div class="auth-head">
+        <a class="auth-brand" href="index.html" aria-label="STACKLY home"><img src="images/Stackly_logo_clean.png" alt="STACKLY"></a>
+        <h1>Log In</h1>
+        <p>Enter the email you signed up with. Your dashboard opens automatically.</p>
+      </div>
+
+      <!-- route guard notice -->
+      <div class="auth-note hide" id="loginNext">
+        <b>Dashboard access required.</b> Log in to continue to <code data-next-name>the dashboard</code>.
+      </div>
+
+      <div class="form-alert" id="loginAlert" role="status" aria-live="polite"></div>
+
+      <!-- success + redirect bar -->
+      <div class="hide" id="loginRedirect">
+        <div class="redirect-bar" aria-hidden="true"><span data-redirect-bar></span></div>
+      </div>
+
+      <form class="auth-form" id="loginForm" novalidate>
+        <div>
+          <label class="label" for="lEmail">Email Address</label>
+          <input class="input" type="email" id="lEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <span class="field-error" id="lEmailErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Enter a valid email address.</span>
+        </div>
+
+        <div>
+          <label class="label" for="lPassword">Password</label>
+          <div style="position:relative">
+            <input class="input" type="password" id="lPassword" name="password" placeholder="At least 6 characters" autocomplete="current-password" required style="padding-right:3rem">
+            <button class="pw-toggle" type="button" data-pw-toggle="lPassword" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="lPasswordErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Password must be at least 6 characters.</span>
+        </div>
+
+        <div class="auth-row">
+          <label class="checkbox" for="lRemember">
+            <input type="checkbox" id="lRemember" name="remember">
+            <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg></span>
+            <span>Keep me logged in on this device</span>
+          </label>
+          <a href="404.html" style="font-size:.86rem;font-weight:700;color:var(--terracotta)">Forgot password?</a>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">
+          Log In &amp; Open Dashboard
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:19px;height:19px"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <div class="auth-divider">or continue with</div>
+      <button class="social-btn social-btn-wide" type="button" data-google-auth onclick="window.location.href='404.html'">
+        <svg class="google-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.96h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.26Z"/><path fill="#34A853" d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.53A9.75 9.75 0 0 0 12 21.75Z"/><path fill="#FBBC05" d="M6.54 13.83A5.86 5.86 0 0 1 6.23 12c0-.64.11-1.26.31-1.83V7.64H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.05 1.05 4.36l3.24-2.53Z"/><path fill="#EA4335" d="M12 6.14c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.15 14.63 2.25 12 2.25a9.75 9.75 0 0 0-8.7 5.39l3.24 2.53C7.31 7.86 9.46 6.14 12 6.14Z"/></svg>
+        Continue with Google
+      </button>
+
+      <p class="auth-alt">New to STACKLY? <a href="signup.html">Create a free account</a></p>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

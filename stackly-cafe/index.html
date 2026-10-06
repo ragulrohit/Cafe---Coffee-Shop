@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STACKLY — Brewed with Passion, Served with Love. Handcrafted espresso, cold brew, teas and fresh bakes in a warm, modern cafe.">
+<meta name="theme-color" content="#241309">
+<title>STACKLY — Your Perfect Cup, Your Perfect Moment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2542f'/%3E%3Cpath d='M8 12h13v5a6.5 6.5 0 0 1-13 0z' fill='%23fff'/%3E%3Cpath d='M21 13h2a2.5 2.5 0 0 1 0 5h-2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="page-loader" aria-hidden="true">
+  <div class="pl-inner">
+    <div class="pl-cup"></div>
+    <h3>STACKLY</h3>
+    <p>Brewed with Passion</p>
+  </div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar on-dark" id="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="STACKLY home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/><path d="M8 2.5c-1 1.4 1 2.2 0 3.5M12 2c-1 1.5 1 2.3 0 3.6"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">STACK<span>L</span>Y</span>
+        <span class="brand-tag">Coffee Roasters</span>
+      </span>
+    </a>
+
+    <nav class="nav-menu" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="coffee.html">Coffee</a>
+      <a class="nav-link" href="offers.html">Offers</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-light btn-sm" href="login.html">Login</a>
+      <a class="btn btn-primary btn-sm" href="signup.html">Sign Up</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a class="m-link" href="index.html">Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="about.html">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="coffee.html">Coffee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="offers.html">Offers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="contact.html">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <div class="m-auth">
+    <a class="btn btn-light btn-block" href="login.html">Login</a>
+    <a class="btn btn-primary btn-block" href="signup.html">Sign Up</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-nav-dark data-beans>
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1800&q=70')" role="img" aria-label="Warm modern cafe interior with wooden tables"></div>
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-2" aria-hidden="true"></span>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Est. 2017 &middot; Craft Roastery</span>
+        <h1 data-reveal="up">Your Perfect Cup,<br>Your <em>Perfect Moment.</em></h1>
+        <p data-reveal="up" data-reveal-delay=".1">
+          At STACKLY every bean is roasted in small batches, every cup is pulled by hand and
+          every seat is chosen for lingering. From a 7&nbsp;AM flat white to a midnight cold brew,
+          we brew with passion and serve it with love.
+        </p>
+        <div class="hero-cta" data-reveal="up" data-reveal-delay=".2">
+          <a class="btn btn-light btn-lg" href="login.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Order Coffee
+          </a>
+        </div>
+        <div class="hero-stats" data-reveal="up" data-reveal-delay=".3">
+          <div class="hero-stat"><b data-count="10" data-suffix="K+">0</b><span>Happy Guests</span></div>
+          <div class="hero-stat"><b data-count="25" data-suffix="+">0</b><span>Coffee Varieties</span></div>
+          <div class="hero-stat"><b data-count="8" data-suffix="+">0</b><span>Years Brewing</span></div>
+          <div class="hero-stat"><b data-count="4.9" data-decimals="1">0</b><span>Avg. Rating</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal="zoom" data-reveal-delay=".15">
+        <div class="hero-cup">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=75" alt="Freshly poured latte with rosetta latte art in a ceramic cup" loading="eager" width="600" height="600" data-label="Latte art">
+        </div>
+        <div class="hero-tag t1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+          <span><b>Roasted Today</b><small>Small-batch, always fresh</small></span>
+        </div>
+        <div class="hero-tag t2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 3.8 8.7 9 9 5.2-.3 9-4 9-9V7z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span><b>4.9 / 5 Rated</b><small>12,480 verified reviews</small></span>
+        </div>
+        <div class="hero-tag t3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <span><b>Open 7 AM</b><small>Open all 7 days</small></span>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#featured" aria-label="Scroll to featured coffees">
+      <span class="mouse"></span>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Single Origin Beans</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Hand Pulled Espresso</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Free Wifi &amp; Warm Seats</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>100% Arabica</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Baked Daily On Site</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Single Origin Beans</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Hand Pulled Espresso</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Free Wifi &amp; Warm Seats</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>100% Arabica</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Baked Daily On Site</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Single Origin Beans</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Hand Pulled Espresso</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Free Wifi &amp; Warm Seats</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>100% Arabica</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Baked Daily On Site</span>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED COFFEE ============ -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <span class="eyebrow">Signature Selection</span>
+        <h2 class="section-title">Featured <span class="title-script">Coffee</span></h2>
+        <p class="section-sub">Six house favourites, dialed in every morning by our head barista and served at the perfect temperature.</p>
+      </div>
+
+      <div class="grid g-3" data-reveal-group=".07">
+        <!-- 1 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=70" alt="Double espresso in a small ceramic cup" loading="lazy" width="700" height="560" data-label="Espresso">
+            <span class="badge">Signature</span>
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Espresso</h3>
+            <p class="card-text">A 30-second double shot with a hazelnut crema and a cocoa-rich finish. Our house benchmark for every blend.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9</span>
+              <span class="chip">30 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;120</span>
+              <button class="add-cart" data-add-cart="Espresso">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=70" alt="Cappuccino with a thick layer of microfoam" loading="lazy" width="700" height="560" data-label="Cappuccino">
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cappuccino</h3>
+            <p class="card-text">Equal thirds of espresso, steamed milk and dense microfoam dusted with bitter cocoa. Balanced, never bitter.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</span>
+              <span class="chip">180 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;180</span>
+              <button class="add-cart" data-add-cart="Cappuccino">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=70" alt="Latte art heart in a wide glass of latte" loading="lazy" width="700" height="560" data-label="Latte">
+            <span class="badge badge-leaf">Bestseller</span>
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Latte</h3>
+            <p class="card-text">Silky whole-milk latte poured with a tulip rosetta. Sweet, round and forgiving — the everyday crowd pleaser.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9</span>
+              <span class="chip">240 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;200</span>
+              <button class="add-cart" data-add-cart="Latte">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=70" alt="Rich chocolate mocha in a glass cup" loading="lazy" width="700" height="560" data-label="Mocha">
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mocha</h3>
+            <p class="card-text">70% single-origin dark chocolate folded into a double ristretto, finished with warm milk and a cocoa nib.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.7</span>
+              <span class="chip">240 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;240</span>
+              <button class="add-cart" data-add-cart="Mocha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=70" alt="Americano with a thin crema on a saucer" loading="lazy" width="700" height="560" data-label="Americano">
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Americano</h3>
+            <p class="card-text">Double espresso lengthened with hot spring water, giving a clean, bright cup that lets the origin story speak.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.6</span>
+              <span class="chip">300 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;150</span>
+              <button class="add-cart" data-add-cart="Americano">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card card-lift coffee-card" data-tilt="5">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?auto=format&fit=crop&w=700&q=70" alt="Cold brew coffee served over ice with orange peel" loading="lazy" width="700" height="560" data-label="Cold Brew">
+            <span class="badge">Summer Hit</span>
+            <div class="card-overlay"><span>Quick View</span></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cold Brew</h3>
+            <p class="card-text">Steeped 18 hours at 4&nbsp;&deg;C for a naturally sweet, low-acid cup poured over a single clear block of ice.</p>
+            <div class="meta">
+              <span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9</span>
+              <span class="chip">350 ml</span>
+            </div>
+            <div class="row-btm">
+              <span class="price">&#8377;220</span>
+              <button class="add-cart" data-add-cart="Cold Brew">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE STACKLY ============ -->
+  <section class="section section-tint" id="why">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <span class="eyebrow">The STACKLY Difference</span>
+        <h2 class="section-title">Why Choose <span class="title-script">STACKLY</span></h2>
+        <p class="section-sub">Four reasons regulars keep coming back — and keep bringing friends.</p>
+      </div>
+
+      <div class="grid g-4" data-reveal-group=".09">
+        <article class="feature-card">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2.5 3.5 5 6.2 5 9.5A5 5 0 0 1 7 11.5C7 8.2 9.5 5.5 12 2Z"/><path d="M5 21h14"/></svg></div>
+          <h3>Freshly Roasted</h3>
+          <p>Our 12&nbsp;kg drum roaster runs four days a week. Beans leave the roaster within 48 hours, so your cup tastes of the harvest, not the shelf.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v6c0 4.4 3.4 7.6 8 8 4.6-.4 8-3.6 8-8V7Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Premium Ingredients</h3>
+          <p>100% Arabica, cold-pressed milk, real cocoa and single-origin chocolate. Nothing artificial, nothing shy about real ingredients.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></div>
+          <h3>Expert Baristas</h3>
+          <p>15 trained baristas, every one of them certified in espresso calibration and milk chemistry. Ask them anything — they love a question.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-6h6v6"/><path d="M3 12h18"/></svg></div>
+          <h3>Cozy Atmosphere</h3>
+          <p>Warm timber, brass fittings, soft jazz and 40 seats with plug points. Built for a two-hour read or a two-minute catch-up.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL OFFER ============ -->
+  <section class="section" id="special-offer">
+    <div class="container">
+      <div class="special-offer" data-reveal="zoom">
+        <div class="so-grid">
+          <div class="so-media">
+            <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=1000&q=70" alt="Freshly roasted coffee beans spilling from a burlap sack" loading="lazy" width="1000" height="800" data-label="Roasted beans">
+          </div>
+          <div class="so-body">
+            <div class="discount-badge" aria-hidden="true">
+              <span><b>40%</b><small>Off</small></span>
+            </div>
+            <span class="eyebrow">Limited Time Only</span>
+            <h2>Harvest Week Special</h2>
+            <p>
+              To celebrate this season's single-origin lot, every hand-crafted beverage is 40% off
+              all week long. Pair a freshly brewed coffee with a cake baked in our kitchen this morning.
+            </p>
+            <div class="so-price">
+              <span class="now">&#8377;129</span>
+              <span class="was">&#8377;215</span>
+              <span class="save">You save &#8377;86</span>
+            </div>
+            <ul class="so-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Valid Monday to Sunday, 7 AM &ndash; 10 PM</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stackable with the Student Sundays offer</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free pastry with every two-coffee order</li>
+            </ul>
+            <div class="flex wrap" style="gap:.8rem">
+              <a class="btn btn-primary btn-lg" href="offers.html">Claim This Offer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS BAND ============ -->
+  <section class="stats-band" data-beans aria-label="STACKLY by the numbers">
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-3" aria-hidden="true"></span>
+    <div class="container">
+      <div class="grid g-4" data-reveal-group=".08">
+        <div class="band-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/></svg>
+          <b data-count="1840000" data-duration="2200">0</b>
+          <span>Cups served since 2017</span>
+        </div>
+        <div class="band-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 7v6c0 5 3.8 8.7 9 9 5.2-.3 9-4 9-9V7Z"/></svg>
+          <b data-count="6" data-suffix=" Origins">0</b>
+          <span>Single-origin beans on bar</span>
+        </div>
+        <div class="band-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+          <b data-count="15">0</b>
+          <span>Certified baristas</span>
+        </div>
+        <div class="band-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
+          <b data-count="98" data-suffix="%">0</b>
+          <span>Would recommend STACKLY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMER REVIEWS ============ -->
+  <section class="section section-tint" id="reviews">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <span class="eyebrow">Guest Book</span>
+        <h2 class="section-title">Loved By <span class="title-script">Our Guests</span></h2>
+        <p class="section-sub">Real notes from the people who fill our tables every morning.</p>
+      </div>
+
+      <div class="grid g-3" data-reveal-group=".08">
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=70" alt="Portrait of Ananya Rao" loading="lazy" width="108" height="108" data-label="Ananya Rao">
+            <span><b>Ananya Rao</b><small>Product Designer &middot; Regular since 2021</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;I've tried a lot of flat whites around the city, but STACKLY is the only place where the extraction is genuinely dial in. I take my laptop here on Tuesdays and it has quietly become the best part of my week.&rdquo;</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=70" alt="Portrait of Daniel Mercer" loading="lazy" width="108" height="108" data-label="Daniel Mercer">
+            <span><b>Daniel Mercer</b><small>Photographer &middot; Weekend visitor</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;The light in the back room at 5 PM is absurdly beautiful. I shoot two weddings a month and keep coming back here between them for a cortado and the cinnamon bun. Warm, quiet, never rushed.&rdquo;</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1592621385612-4d7129426394?auto=format&fit=crop&w=200&q=70" alt="Portrait of Rohan Malhotra" loading="lazy" width="108" height="108" data-label="Rohan Malhotra">
+            <span><b>Rohan Malhotra</b><small>Food Blogger &middot; 42K followers</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Cold brew that isn't sour, a mocha that actually tastes of chocolate, and staff who let you taste the new lot before it hits the board. STACKLY understands that coffee is a craft, not a beverage.&rdquo;</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=70" alt="Portrait of Meera Iyer" loading="lazy" width="108" height="108" data-label="Meera Iyer">
+            <span><b>Meera Iyer</b><small>Architect &middot; Morning commuter</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Order the cortado. It is small, it is strong, and it is made exactly the way it should be. The team remembered my order after two visits and I have been loyal ever since.&rdquo;</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=70" alt="Portrait of Arjun Nair" loading="lazy" width="108" height="108" data-label="Arjun Nair">
+            <span><b>Arjun Nair</b><small>Software Engineer &middot; Loyalty member</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Worked from STACKLY for three months during a project. The WiFi never dropped, the plug points are everywhere, and the pour-over rotation meant I never got bored. A proper work cafe.&rdquo;</p>
+        </article>
+
+        <article class="testimonial">
+          <div class="t-head">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1461988091159-192b6df7054f?auto=format&fit=crop&w=200&q=70" alt="Portrait of Clara Dsouza" loading="lazy" width="108" height="108" data-label="Clara Dsouza">
+            <span><b>Clara Dsouza</b><small>Chef &middot; Sweet tooth</small></span>
+          </div>
+          <div class="t-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;As a fellow food person I am fussy about consistency, and the walnut cake here never changes. Same crumb, same glaze, same generous slice. That is how you know a kitchen cares.&rdquo;</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY PREVIEW ============ -->
+  <section class="section" id="gallery-preview">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <span class="eyebrow">Inside STACKLY</span>
+        <h2 class="section-title">A Glimpse Of <span class="title-script">Our World</span></h2>
+        <p class="section-sub">Warm timber, brass fittings, an open bar and a bakery counter that never quite empties.</p>
+      </div>
+
+      <div class="gallery-grid" data-reveal-group=".06">
+        <a class="gallery-item wide" href="gallery.html" aria-label="View the cafe interior gallery">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=70" alt="STACKLY cafe interior with high ceilings and communal tables" loading="lazy" width="900" height="900" data-label="The Cafe Interior">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>The Cafe Interior</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View coffee cup photography">
+          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=70" alt="Row of espresso cups viewed from above" loading="lazy" width="600" height="600" data-label="Coffee Cups">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Coffee Cups</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View dessert photography">
+          <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=70" alt="Slice of layered chocolate cake with berries" loading="lazy" width="600" height="600" data-label="Dessert Counter">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Dessert Counter</b></span>
+        </a>
+        <a class="gallery-item tall" href="gallery.html" aria-label="View our baristas">
+          <img src="https://images.unsplash.com/photo-1534350876685-274059332603?auto=format&fit=crop&w=600&q=70" alt="Barista preparing a pour-over at the STACKLY bar" loading="lazy" width="600" height="900" data-label="Behind The Bar">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Behind The Bar</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View our coffee beans">
+          <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=600&q=70" alt="Close-up of roasted coffee beans" loading="lazy" width="600" height="600" data-label="The Green &amp; The Roasted">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Green &amp; Roasted</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View happy customers">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=70" alt="Friends sharing coffee and conversation at a cafe table" loading="lazy" width="600" height="600" data-label="Our Guests">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Our Guests</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View the bakery kitchen">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=70" alt="Fresh pastries from the bakery kitchen" loading="lazy" width="600" height="600" data-label="Bakery Kitchen">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Bakery Kitchen</b></span>
+        </a>
+        <a class="gallery-item" href="gallery.html" aria-label="View the reading nook">
+          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=600&q=70" alt="Quiet reading nook inside the cafe" loading="lazy" width="600" height="600" data-label="Reading Nook">
+          <span class="g-overlay"><span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span><b>Reading Nook</b></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="blob blob-1" aria-hidden="true"></span>
+        <span class="blob blob-2" aria-hidden="true"></span>
+        <span class="eyebrow" style="color:#fff;background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3)">Join The Stackly Family</span>
+        <h2>Create an Account &amp; Brew Faster</h2>
+        <p>Members get early access to new roasts, double loyalty points on Tuesdays and a saved favourite list across every STACKLY counter.</p>
+        <div class="flex wrap" style="gap:.8rem;justify-content:center;margin-top:1.8rem">
+          <a class="btn btn-dark btn-lg" href="signup.html">Sign Up Free</a>
+          <a class="btn btn-light btn-lg" href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <span class="blob blob-1" aria-hidden="true"></span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/><path d="M8 2.5c-1 1.4 1 2.2 0 3.5M12 2c-1 1.5 1 2.3 0 3.6"/></svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">STACK<span>L</span>Y</span>
+            <span class="brand-tag">Brewed with Passion</span>
+          </span>
+        </a>
+        <p>STACKLY is a small-batch coffee roastery and cafe. We source responsibly, roast gently and serve generously — because a good cup is really just the start of someone's day.</p>
+        <div class="socials">
+          <a href="contact.html" aria-label="STACKLY on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a>
+          <a href="contact.html" aria-label="Email STACKLY"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="f-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="coffee.html">Coffee Guide</a></li>
+          <li><a href="offers.html">Offers &amp; Deals</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Opening Hours</h4>
+        <ul class="f-info" style="gap:.55rem">
+          <li class="hours-row"><span>Monday &ndash; Friday</span><span>7:00 &ndash; 22:00</span></li>
+          <li class="hours-row"><span>Saturday</span><span>8:00 &ndash; 23:00</span></li>
+          <li class="hours-row"><span>Sunday</span><span>8:00 &ndash; 22:00</span></li>
+          <li class="hours-row"><span>Public Holidays</span><span>9:00 &ndash; 20:00</span></li>
+        </ul>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.5);margin-top:.9rem" data-open-status></p>
+      </div>
+
+      <div>
+        <h4>Visit The Counter</h4>
+        <ul class="f-info">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>14 Roastery Lane, Indiranagar<br>Bengaluru 560038, India</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+            <a href="mailto:hello@stackly.cafe">hello@stackly.cafe</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            <span style="display:flex;gap:.45rem;align-items:center">Order online: <a href="menu.html">stackly.cafe/order</a></span>
+          </li>
+        </ul>
+
+        <h4 style="margin-top:1.6rem">Newsletter</h4>
+        <form class="newsletter" data-newsletter>
+          <label class="sr-only" for="nlEmail">Email address</label>
+          <input type="email" id="nlEmail" name="email" placeholder="Your email address" autocomplete="email" required>
+          <button type="submit" aria-label="Subscribe to the STACKLY newsletter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-4 14-3-6z"/></svg></button>
+        </form>
+        <p class="newsletter-note">New roasts, offers and menu drops. No spam, ever.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p style="margin:0">&copy; <span data-year>2026</span> STACKLY Coffee Roasters. All rights reserved. &middot; Brewed with Passion, Served with Love.</p>
+      <div class="legal">
+        <a href="about.html">Our Story</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="login.html">Dashboard</a>
+        <a href="404.html">Error 404</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

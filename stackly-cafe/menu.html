@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The full STACKLY menu — hot coffee, cold coffee, tea, snacks, desserts and breakfast, with ratings, prices and one-tap add to cart.">
+<meta name="theme-color" content="#241309">
+<title>Menu — STACKLY Coffee Roasters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2542f'/%3E%3Cpath d='M8 12h13v5a6.5 6.5 0 0 1-13 0z' fill='%23fff'/%3E%3Cpath d='M21 13h2a2.5 2.5 0 0 1 0 5h-2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar on-dark" id="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="STACKLY home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/><path d="M8 2.5c-1 1.4 1 2.2 0 3.5M12 2c-1 1.5 1 2.3 0 3.6"/></svg></span>
+      <span class="brand-text"><span class="brand-name">STACK<span>L</span>Y</span><span class="brand-tag">Coffee Roasters</span></span>
+    </a>
+    <nav class="nav-menu" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="coffee.html">Coffee</a>
+      <a class="nav-link" href="offers.html">Offers</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-light btn-sm" href="login.html">Login</a>
+      <a class="btn btn-primary btn-sm" href="signup.html">Sign Up</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a class="m-link" href="index.html">Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="about.html">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="coffee.html">Coffee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="offers.html">Offers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="contact.html">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a>
+  <div class="m-auth">
+    <a class="btn btn-light btn-block" href="login.html">Login</a>
+    <a class="btn btn-primary btn-block" href="signup.html">Sign Up</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero" data-nav-dark data-beans>
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-2" aria-hidden="true"></span>
+    <div class="container page-hero-inner">
+      <span class="eyebrow">Roasted &amp; Baked Daily</span>
+      <h1 data-reveal="up">The STACKLY <span class="title-script">Menu</span></h1>
+      <p data-reveal="up" data-reveal-delay=".1">Six categories, thirty-four favourites and a board that changes with every new harvest. Prices include tax.</p>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+        <span>Menu</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============ FILTER BAR + SEARCH ============ -->
+  <section class="section-sm section-tint">
+    <div class="container">
+      <div class="search-field" data-reveal="up" style="margin-bottom:1.4rem">
+        <svg class="field-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="sr-only" for="menuSearch">Search the STACKLY menu</label>
+        <input type="search" id="menuSearch" data-menu-search placeholder="Search for cold brew, croissant, matcha…" autocomplete="off">
+        <button class="search-clear" type="button" data-search-clear aria-label="Clear search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="filter-bar" data-filter-bar role="group" aria-label="Filter menu by category" data-reveal="up">
+        <button class="filter-btn active" data-filter="all" type="button"><span>Everything</span><small>34</small></button>
+        <button class="filter-btn" data-filter="hot" type="button"><span>Hot Coffee</span><small></small></button>
+        <button class="filter-btn" data-filter="cold" type="button"><span>Cold Coffee</span><small></small></button>
+        <button class="filter-btn" data-filter="tea" type="button"><span>Tea</span><small></small></button>
+        <button class="filter-btn" data-filter="snacks" type="button"><span>Snacks</span><small></small></button>
+        <button class="filter-btn" data-filter="desserts" type="button"><span>Desserts</span><small></small></button>
+        <button class="filter-btn" data-filter="breakfast" type="button"><span>Breakfast</span><small></small></button>
+      </div>
+
+      <p class="text-center fs-sm text-soft" data-filter-count style="margin:0"><b>34</b> items shown</p>
+    </div>
+  </section>
+
+  <!-- ============ MENU GRID ============ -->
+  <section class="section-sm" style="padding-top:0">
+    <div class="container">
+      <div class="grid g-3" data-filter-grid>
+
+        <!-- ===== HOT COFFEE ===== -->
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="espresso single origin double shot shot">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=70" alt="Double espresso served in a small cup" loading="lazy" data-label="Espresso"><span class="badge">Signature</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Espresso</h3>
+            <p class="card-text">A 30&nbsp;ml double shot, hazelnut crema, cocoa finish.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(312)</span></span><span class="chip caramel">30 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;120</span><button class="add-cart" data-add-cart="Espresso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="cappuccino foam milky">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=70" alt="Cappuccino topped with dense microfoam" loading="lazy" data-label="Cappuccino"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Cappuccino</h3>
+            <p class="card-text">Equal thirds espresso, steamed milk and cocoa-dusted foam.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(276)</span></span><span class="chip caramel">180 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;180</span><button class="add-cart" data-add-cart="Cappuccino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="latte rosetta milk">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=70" alt="Latte with rosetta art in a glass cup" loading="lazy" data-label="Latte"><span class="badge badge-leaf">Bestseller</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Latte</h3>
+            <p class="card-text">Whole milk, tulip rosetta, sweet and forgiving.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(401)</span></span><span class="chip caramel">240 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;200</span><button class="add-cart" data-add-cart="Latte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="mocha chocolate cocoa">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=70" alt="Chocolate mocha in a glass cup" loading="lazy" data-label="Mocha"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Mocha</h3>
+            <p class="card-text">70% dark chocolate folded into a double ristretto.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.7 <span class="count">(188)</span></span><span class="chip caramel">240 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;240</span><button class="add-cart" data-add-cart="Mocha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="americano long black filter">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=70" alt="Americano on a saucer with a thin crema" loading="lazy" data-label="Americano"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Americano</h3>
+            <p class="card-text">Double espresso lengthened with hot spring water.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.6 <span class="count">(152)</span></span><span class="chip caramel">300 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;150</span><button class="add-cart" data-add-cart="Americano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="flat white microfoam australia">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=700&q=70" alt="Flat white with a perfectly poured tulip" loading="lazy" data-label="Flat White"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Flat White</h3>
+            <p class="card-text">Ristretto and microfoam, built for a stronger palate.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(203)</span></span><span class="chip caramel">160 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;190</span><button class="add-cart" data-add-cart="Flat White"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="cortado gibraltar small strong">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=700&q=70" alt="Cortado in a small glass" loading="lazy" data-label="Cortado"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Cortado</h3>
+            <p class="card-text">Equal espresso and steamed milk in a 120&nbsp;ml glass.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(164)</span></span><span class="chip caramel">120 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;160</span><button class="add-cart" data-add-cart="Cortado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="hot" data-search="macchiato foam dollop">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=700&q=70" alt="Macchiato marked with a dollop of foam" loading="lazy" data-label="Macchiato"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Macchiato</h3>
+            <p class="card-text">Espresso marked with a single spoon of dense foam.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.5 <span class="count">(97)</span></span><span class="chip caramel">60 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;110</span><button class="add-cart" data-add-cart="Macchiato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <!-- ===== COLD COFFEE ===== -->
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="cold brew iced steeped eighteen hours">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?auto=format&fit=crop&w=700&q=70" alt="Cold brew served over ice with orange peel" loading="lazy" data-label="Cold Brew"><span class="badge">Summer Hit</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Cold Brew</h3>
+            <p class="card-text">Steeped 18 hours at 4&nbsp;&deg;C for a sweet, low-acid cup.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(388)</span></span><span class="chip">350 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;220</span><button class="add-cart" data-add-cart="Cold Brew"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="iced latte cold milk ice">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=70" alt="Iced latte in a tall glass" loading="lazy" data-label="Iced Latte"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Iced Latte</h3>
+            <p class="card-text">Double shot poured over ice and cold whole milk.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(241)</span></span><span class="chip">300 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;210</span><button class="add-cart" data-add-cart="Iced Latte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="iced americano sparkling cold">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=70" alt="Cold brew bottles chilling in the fridge" loading="lazy" data-label="Iced Americano"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Iced Americano</h3>
+            <p class="card-text">Espresso over ice with a twist of orange peel oil.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.5 <span class="count">(118)</span></span><span class="chip">350 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;170</span><button class="add-cart" data-add-cart="Iced Americano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="coffee frappe blended cream cold">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=700&q=70" alt="Frappe blended with ice and topped with cream" loading="lazy" data-label="Coffee Frappe"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Coffee Frappe</h3>
+            <p class="card-text">Blended cold brew with coconut cream and cocoa dust.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(176)</span></span><span class="chip terra">Iced</span></div>
+            <div class="row-btm"><span class="price">&#8377;280</span><button class="add-cart" data-add-cart="Coffee Frappe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="nitro cold brew tap creamy">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=700&q=70" alt="Nitro cold brew on tap with a cascading pour" loading="lazy" data-label="Nitro Cold Brew"><span class="badge">New</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Nitro Cold Brew</h3>
+            <p class="card-text">Nitrogen-infused for cascading texture and no bitterness.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(129)</span></span><span class="chip">300 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;260</span><button class="add-cart" data-add-cart="Nitro Cold Brew"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="cold" data-search="cascara tonic sparkling coffee fruit">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=700&q=70" alt="Coffee cascara tonic in a chilled glass" loading="lazy" data-label="Cascara Tonic"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Cascara Tonic</h3>
+            <p class="card-text">Coffee-cherry soda with tonic, lime and a pinch of salt.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.4 <span class="count">(86)</span></span><span class="chip terra">Iced</span></div>
+            <div class="row-btm"><span class="price">&#8377;240</span><button class="add-cart" data-add-cart="Cascara Tonic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <!-- ===== TEA ===== -->
+        <article class="card card-lift coffee-card" data-cat="tea" data-search="masala chai indian spices ginger cardamom">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=700&q=70" alt="Masala chai simmering with whole spices" loading="lazy" data-label="Masala Chai"><span class="badge">House Favourite</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Masala Chai</h3>
+            <p class="card-text">Assam steeped with ginger, cardamom and clove.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(212)</span></span><span class="chip caramel">200 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;150</span><button class="add-cart" data-add-cart="Masala Chai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="tea" data-search="matcha green powder latte whisked">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&w=700&q=70" alt="Matcha latte whisked in a ceramic bowl" loading="lazy" data-label="Matcha Latte"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Matcha Latte</h3>
+            <p class="card-text">Ceremonial-grade Uji matcha whisked with oat milk.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(134)</span></span><span class="chip">220 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;250</span><button class="add-cart" data-add-cart="Matcha Latte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="tea" data-search="green tea sencha light clean">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=70" alt="Green tea leaves steeping in a glass pot" loading="lazy" data-label="Sencha Green Tea"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Sencha Green Tea</h3>
+            <p class="card-text">Light, grassy and brewed at 78&nbsp;&deg;C to keep the sweetness.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.4 <span class="count">(78)</span></span><span class="chip caramel">200 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;140</span><button class="add-cart" data-add-cart="Sencha Green Tea"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="tea" data-search="herbal chamomile caffeine free evening">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=700&q=70" alt="Herbal infusion steeping in a clay pot" loading="lazy" data-label="Herbal Infusion"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Herbal Infusion</h3>
+            <p class="card-text">Chamomile, lemon verbena and rooibos. Caffeine free.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.3 <span class="count">(64)</span></span><span class="chip">Caffeine free</span></div>
+            <div class="row-btm"><span class="price">&#8377;130</span><button class="add-cart" data-add-cart="Herbal Infusion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="tea" data-search="black tea assam breakfast bold">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=700&q=70" alt="Strong black Assam tea served in a glass" loading="lazy" data-label="Assam Black Tea"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Assam Black Tea</h3>
+            <p class="card-text">Bold, malty single-garden Assam with a golden tip.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.4 <span class="count">(71)</span></span><span class="chip caramel">200 ml</span></div>
+            <div class="row-btm"><span class="price">&#8377;130</span><button class="add-cart" data-add-cart="Assam Black Tea"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <!-- ===== SNACKS ===== -->
+        <article class="card card-lift coffee-card" data-cat="snacks" data-search="butter croissant baked flaky pastry">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=70" alt="Golden butter croissants cooling on a rack" loading="lazy" data-label="Butter Croissant"><span class="badge">Baked 6 AM</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Butter Croissant</h3>
+            <p class="card-text">Laminated 27 layers with French cultured butter.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(318)</span></span><span class="chip terra">Vegan option</span></div>
+            <div class="row-btm"><span class="price">&#8377;170</span><button class="add-cart" data-add-cart="Butter Croissant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="snacks" data-search="blueberry muffin bakery crumb">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=700&q=70" alt="Blueberry muffins with a golden crumb top" loading="lazy" data-label="Blueberry Muffin"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Blueberry Muffin</h3>
+            <p class="card-text">Buttermilk batter, tart berries, crisp streusel top.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(205)</span></span><span class="chip terra">Eggless</span></div>
+            <div class="row-btm"><span class="price">&#8377;150</span><button class="add-cart" data-add-cart="Blueberry Muffin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="snacks" data-search="club sandwich smoked chicken salad">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=700&q=70" alt="Grilled club sandwich cut into triangles on a board" loading="lazy" data-label="Grilled Club Sandwich"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Grilled Club</h3>
+            <p class="card-text">Smoked chicken, cheddar, bacon and herb mayo.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.6 <span class="count">(142)</span></span><span class="chip caramel">320 g</span></div>
+            <div class="row-btm"><span class="price">&#8377;290</span><button class="add-cart" data-add-cart="Grilled Club"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="snacks" data-search="garlic bread cheese toast">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=70" alt="Garlic bread with melted cheese and herbs" loading="lazy" data-label="Garlic Bread"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Garlic Bread</h3>
+            <p class="card-text">Sourdough, garlic confit butter and aged parmesan.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.5 <span class="count">(119)</span></span><span class="chip caramel">4 pcs</span></div>
+            <div class="row-btm"><span class="price">&#8377;190</span><button class="add-cart" data-add-cart="Garlic Bread"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="snacks" data-search="banana walnut cake loaf slices">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1554679665-f5537f187268?auto=format&fit=crop&w=700&q=70" alt="Slices of banana walnut loaf on a plate" loading="lazy" data-label="Banana Walnut Loaf"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Banana Walnut Loaf</h3>
+            <p class="card-text">Overripe bananas, toasted walnuts, brown sugar crust.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(166)</span></span><span class="chip terra">2 slices</span></div>
+            <div class="row-btm"><span class="price">&#8377;140</span><button class="add-cart" data-add-cart="Banana Walnut Loaf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <!-- ===== DESSERTS ===== -->
+        <article class="card card-lift coffee-card" data-cat="desserts" data-search="chocolate cake layered ganache">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=700&q=70" alt="Layered chocolate cake with ganache and berries" loading="lazy" data-label="Chocolate Cake"><span class="badge">Chef's Pick</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Chocolate Cake</h3>
+            <p class="card-text">Three layers of dark sponge, 70% ganache, sea salt.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 <span class="count">(289)</span></span><span class="chip terra">Eggless</span></div>
+            <div class="row-btm"><span class="price">&#8377;320</span><button class="add-cart" data-add-cart="Chocolate Cake"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="desserts" data-search="tiramisu mascarpone cocoa layered italian">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1600335895229-6e75511892c8?auto=format&fit=crop&w=700&q=70" alt="Classic tiramisu dusted with cocoa" loading="lazy" data-label="Tiramisu"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Tiramisu</h3>
+            <p class="card-text">Espresso-soaked savoiardi and mascarpone cream.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(231)</span></span><span class="chip caramel">Cup</span></div>
+            <div class="row-btm"><span class="price">&#8377;280</span><button class="add-cart" data-add-cart="Tiramisu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="desserts" data-search="brownie fudge walnut chewy">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=70" alt="Brownie dusted with flaky sea salt" loading="lazy" data-label="Salted Brownie"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Salted Brownie</h3>
+            <p class="card-text">Chewy centre, crackled top, flaky sea salt.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(197)</span></span><span class="chip terra">Eggless</span></div>
+            <div class="row-btm"><span class="price">&#8377;220</span><button class="add-cart" data-add-cart="Salted Brownie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="desserts" data-search="cheesecake berry basque burnt">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=700&q=70" alt="Basque cheesecake with a burnt top and berries" loading="lazy" data-label="Basque Cheesecake"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Basque Cheesecake</h3>
+            <p class="card-text">Burnt-topped, set in the middle, seasonal berry coulis.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(154)</span></span><span class="chip caramel">Slice</span></div>
+            <div class="row-btm"><span class="price">&#8377;300</span><button class="add-cart" data-add-cart="Basque Cheesecake"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="desserts" data-search="cookie chocolate chip warm bakery">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=700&q=70" alt="Warm chocolate chip cookies cooling on a tray" loading="lazy" data-label="Chocolate Chip Cookie"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Chocolate Chip</h3>
+            <p class="card-text">Brown-butter cookie, 55% dark chocolate chunks.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.6 <span class="count">(182)</span></span><span class="chip terra">Pack of 2</span></div>
+            <div class="row-btm"><span class="price">&#8377;120</span><button class="add-cart" data-add-cart="Chocolate Chip Cookie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <!-- ===== BREAKFAST ===== -->
+        <article class="card card-lift coffee-card" data-cat="breakfast" data-search="pancakes maple butter syrup stack">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=700&q=70" alt="Stack of pancakes with maple syrup and berries" loading="lazy" data-label="Buttermilk Pancakes"><span class="badge">Till 11 AM</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Buttermilk Pancakes</h3>
+            <p class="card-text">Three fluffy stacks, maple butter, seasonal berries.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 <span class="count">(214)</span></span><span class="chip caramel">3 pcs</span></div>
+            <div class="row-btm"><span class="price">&#8377;320</span><button class="add-cart" data-add-cart="Buttermilk Pancakes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="breakfast" data-search="belgian waffle berry yoghurt">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=700&q=70" alt="Belgian waffle with berries and yoghurt" loading="lazy" data-label="Belgian Waffle"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Belgian Waffle</h3>
+            <p class="card-text">Crisp pearl-sugar waffle, thick yoghurt, berry compote.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(176)</span></span><span class="chip caramel">1 pc</span></div>
+            <div class="row-btm"><span class="price">&#8377;300</span><button class="add-cart" data-add-cart="Belgian Waffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="breakfast" data-search="eggs benedict hollandaise poached">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=70" alt="Eggs benedict with hollandaise sauce" loading="lazy" data-label="Eggs Benedict"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Eggs Benedict</h3>
+            <p class="card-text">Poached eggs, smoked ham, sourdough, hollandaise.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.6 <span class="count">(88)</span></span><span class="chip caramel">2 eggs</span></div>
+            <div class="row-btm"><span class="price">&#8377;380</span><button class="add-cart" data-add-cart="Eggs Benedict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="breakfast" data-search="avocado toast poached egg seeds">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=700&q=70" alt="Avocado toast with poached egg and seeds" loading="lazy" data-label="Avocado Toast"><span class="badge">Vegan*</span><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Avocado Toast</h3>
+            <p class="card-text">Sourdough, smashed avocado, poached egg, chilli crisp.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 <span class="count">(201)</span></span><span class="chip terra">Vegetarian</span></div>
+            <div class="row-btm"><span class="price">&#8377;340</span><button class="add-cart" data-add-cart="Avocado Toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+
+        <article class="card card-lift coffee-card" data-cat="breakfast" data-search="granola bowl yoghurt honey nuts">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=70" alt="Granola bowl with yoghurt, honey and toasted nuts" loading="lazy" data-label="Granola Bowl"><div class="card-overlay"><span>Add to order</span></div></div>
+          <div class="card-body">
+            <h3 class="card-title">Granola Bowl</h3>
+            <p class="card-text">Oat granola, thick yoghurt, honey, almonds, banana.</p>
+            <div class="meta"><span class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&nbsp;</span> 4.5 <span class="count">(74)</span></span><span class="chip terra">Vegetarian</span></div>
+            <div class="row-btm"><span class="price">&#8377;290</span><button class="add-cart" data-add-cart="Granola Bowl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add</button></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state hide" data-filter-empty>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M8 11h6"/></svg>
+        <h3>Nothing matches that search</h3>
+        <p class="text-soft">Try another word, or clear the filter to see all 34 items.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORDER BAND ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="blob blob-1" aria-hidden="true"></span>
+        <span class="eyebrow" style="color:#fff;background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3)">Ready To Order?</span>
+        <h2>Skip The Queue, Order Ahead</h2>
+        <p>Log in to save a favourite list, track loyalty points and reorder your usual in two taps.</p>
+        <div class="flex wrap" style="gap:.8rem;justify-content:center;margin-top:1.6rem">
+          <a class="btn btn-dark btn-lg" href="login.html">Login &amp; Order</a>
+          <a class="btn btn-light btn-lg" href="offers.html">See Today's Offers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="blob blob-1" aria-hidden="true"></span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/><path d="M8 2.5c-1 1.4 1 2.2 0 3.5M12 2c-1 1.5 1 2.3 0 3.6"/></svg></span>
+          <span class="brand-text"><span class="brand-name">STACK<span>L</span>Y</span><span class="brand-tag">Brewed with Passion</span></span>
+        </a>
+        <p>STACKLY is a small-batch coffee roastery and cafe. We source responsibly, roast gently and serve generously — because a good cup is really just the start of someone's day.</p>
+        <div class="socials">
+          <a href="contact.html" aria-label="STACKLY on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="contact.html" aria-label="STACKLY on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a>
+          <a href="contact.html" aria-label="Email STACKLY"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="f-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="coffee.html">Coffee Guide</a></li>
+          <li><a href="offers.html">Offers &amp; Deals</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <ul class="f-info" style="gap:.55rem">
+          <li class="hours-row"><span>Monday &ndash; Friday</span><span>7:00 &ndash; 22:00</span></li>
+          <li class="hours-row"><span>Saturday</span><span>8:00 &ndash; 23:00</span></li>
+          <li class="hours-row"><span>Sunday</span><span>8:00 &ndash; 22:00</span></li>
+          <li class="hours-row"><span>Public Holidays</span><span>9:00 &ndash; 20:00</span></li>
+        </ul>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.5);margin-top:.9rem" data-open-status></p>
+      </div>
+      <div>
+        <h4>Visit The Counter</h4>
+        <ul class="f-info">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>14 Roastery Lane, Indiranagar<br>Bengaluru 560038, India</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:hello@stackly.cafe">hello@stackly.cafe</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg><span style="display:flex;gap:.45rem;align-items:center">Order online: <a href="menu.html">stackly.cafe/order</a></span></li>
+        </ul>
+        <h4 style="margin-top:1.6rem">Newsletter</h4>
+        <form class="newsletter" data-newsletter>
+          <label class="sr-only" for="nlEmail">Email address</label>
+          <input type="email" id="nlEmail" name="email" placeholder="Your email address" autocomplete="email" required>
+          <button type="submit" aria-label="Subscribe to the STACKLY newsletter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-4 14-3-6z"/></svg></button>
+        </form>
+        <p class="newsletter-note">New roasts, offers and menu drops. No spam, ever.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="margin:0">&copy; <span data-year>2026</span> STACKLY Coffee Roasters. All rights reserved. &middot; Brewed with Passion, Served with Love.</p>
+      <div class="legal">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="offers.html">Offers</a>
+        <a href="login.html">Dashboard</a>
+        <a href="404.html">Error 404</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

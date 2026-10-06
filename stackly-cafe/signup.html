@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Create a free STACKLY account in thirty seconds. No card, no auto-renewal — start collecting reward points from your first cup.">
+<meta name="theme-color" content="#241309">
+<title>Sign Up — STACKLY Coffee Roasters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2542f'/%3E%3Cpath d='M8 12h13v5a6.5 6.5 0 0 1-13 0z' fill='%23fff'/%3E%3Cpath d='M21 13h2a2.5 2.5 0 0 1 0 5h-2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="auth">
+
+  <!-- ============ VISUAL SIDE ============ -->
+  <aside class="auth-visual">
+    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=70" alt="Freshly roasted coffee beans cooling after a roast" data-label="STACKLY Beans">
+    <span class="blob blob-2" aria-hidden="true"></span>
+    <span class="blob blob-3" aria-hidden="true"></span>
+    <div class="auth-quote">
+      <span class="eyebrow" style="color:#fff;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.28)">Free Forever</span>
+      <h2>One account. Every counter, every roast.</h2>
+      <p>Members collect a point for every &#8377;100, get a birthday reward, and reach the Roaster tier in under a year of honest coffee drinking.</p>
+      <ul class="q-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>No card, no auto-renewal, no phone marketing</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Order history and reorder in two taps</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Your details stay in this browser only</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- ============ FORM SIDE ============ -->
+  <main class="auth-panel">
+    <div class="auth-topbar">
+      <a class="auth-home-link" href="index.html" aria-label="Back to home">&larr; Back to Home</a>
+    </div>
+
+    <div class="auth-panel-inner">
+      <div class="auth-head">
+        <a class="auth-brand" href="index.html" aria-label="STACKLY home"><img src="images/Stackly_logo_clean.png" alt="STACKLY"></a>
+        <h1>Create Account</h1>
+        <p>Sign up below, then log in to open the STACKLY dashboard.</p>
+      </div>
+
+      <div class="form-alert" id="signupAlert" role="status" aria-live="polite"></div>
+
+      <form class="auth-form signup-form" id="signupForm" novalidate>
+
+        <div>
+          <label class="label" for="sName">Full Name</label>
+          <input class="input" type="text" id="sName" name="name" placeholder="Priya Menon" autocomplete="name" required>
+          <span class="field-error" id="sNameErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Please enter your full name.</span>
+        </div>
+
+        <div>
+          <label class="label" for="sEmail">Email Address</label>
+          <input class="input" type="email" id="sEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <span class="field-error" id="sEmailErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Enter a valid email address.</span>
+        </div>
+
+        <div>
+          <label class="label" for="sPhone">Phone Number</label>
+          <input class="input" type="tel" id="sPhone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required>
+          <span class="field-error" id="sPhoneErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Enter a valid phone number (e.g. +91 98765 43210).</span>
+        </div>
+
+        <div>
+          <label class="label" for="sRole">Choose Role</label>
+          <select class="select" id="sRole" name="role" required>
+            <option value="">Select your role</option>
+            <option value="customer">Customer</option>
+            <option value="barista">Barista</option>
+            <option value="cafe-manager">Cafe Manager</option>
+          </select>
+          <span class="field-error" id="sRoleErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Please choose a role.</span>
+        </div>
+
+        <div>
+          <label class="label" for="sPassword">Password</label>
+          <div style="position:relative">
+            <input class="input" type="password" id="sPassword" name="password" placeholder="Minimum 6 characters" autocomplete="new-password" required style="padding-right:3rem">
+            <button class="pw-toggle" type="button" data-pw-toggle="sPassword" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="sPasswordErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Password must be at least 6 characters.</span>
+          <div class="pw-strength pw-meter-wrap" data-pw-strength="sPassword" data-level="0">
+            <div class="pw-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <small class="pw-label" data-pw-label>Use 8+ chars, mix cases, numbers &amp; symbols</small>
+          </div>
+        </div>
+
+        <div>
+          <label class="label" for="sConfirm">Confirm Password</label>
+          <div style="position:relative">
+            <input class="input" type="password" id="sConfirm" name="confirm" placeholder="Type it again" autocomplete="new-password" required style="padding-right:3rem">
+            <button class="pw-toggle" type="button" data-pw-toggle="sConfirm" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="sConfirmErr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>Passwords do not match.</span>
+        </div>
+
+        <label class="checkbox" for="sTerms">
+          <input type="checkbox" id="sTerms" name="terms" required>
+          <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg></span>
+          <span>I agree to the <a href="contact.html">Terms &amp; Conditions</a> and the <a href="contact.html">Privacy Policy</a> of STACKLY Coffee Roasters.</span>
+        </label>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">
+          Create My Account
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:19px;height:19px"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+      </form>
+
+      <!-- ============ SUCCESS CARD ============ -->
+      <div class="hide" id="signupSuccess">
+        <div class="ss-card">
+          <span class="ss-avatar" data-su-avatar>SK</span>
+          <h3>Account created, <span data-su-name>friend</span>!</h3>
+          <p>We have saved your details for <b data-su-email>you@example.com</b>. Log in now to open your dashboard and start collecting points.</p>
+          <div class="ss-actions">
+            <a class="btn btn-primary" href="login.html">Go To Login</a>
+            <a class="btn btn-outline" href="menu.html">Browse The Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="auth-alt">Already have an account? <a href="login.html">Log in instead</a></p>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

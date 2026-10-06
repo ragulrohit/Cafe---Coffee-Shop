@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manage the STACKLY menu — add, edit, toggle availability and delete items from the admin dashboard.">
+<meta name="theme-color" content="#241309">
+<title>Menu Items — STACKLY Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2542f'/%3E%3Cpath d='M8 12h13v5a6.5 6.5 0 0 1-13 0z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body class="dash-body">
+
+<div class="sb-overlay" id="sbOverlay"></div>
+
+<div class="dash-shell">
+
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a class="sb-brand" href="index.html" aria-label="STACKLY home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 10.5h1.6a2.7 2.7 0 0 1 0 5.4H17"/><path d="M8 2.5c-1 1.4 1 2.2 0 3.5M12 2c-1 1.5 1 2.3 0 3.6"/></svg></span>
+      <span class="sb-brand-txt"><span class="brand-name">STACKLY</span><span class="brand-tag">ADMIN CONSOLE</span></span>
+    </a>
+
+    <p class="sb-label">Overview</p>
+    <nav class="sb-nav" aria-label="Dashboard sections">
+      <a class="sb-link" href="dashboard.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span><span class="sb-txt">Dashboard</span></a>
+      <a class="sb-link" href="orders.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l2 5H4z"/><path d="M4 7v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/><path d="M9 12h6"/></svg></span><span class="sb-txt">Orders</span><span class="sb-pill">12</span></a>
+    </nav>
+
+    <p class="sb-label">Catalogue</p>
+    <nav class="sb-nav" aria-label="Catalogue sections">
+      <a class="sb-link" href="dashboard-menu.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="sb-txt">Menu Items</span></a>
+      <a class="sb-link" href="dashboard-coffee.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="14" rx="7" ry="5"/><path d="M5 9c0-2 3-4 7-4s7 2 7 4"/><path d="M12 3v2"/></svg></span><span class="sb-txt">Coffee Blends</span></a>
+      <a class="sb-link" href="dashboard-offers.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7h20v5H2z"/><path d="M12 22V7"/></svg></span><span class="sb-txt">Offers</span></a>
+      <a class="sb-link" href="customers.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span><span class="sb-txt">Customers</span></a>
+    </nav>
+
+    <p class="sb-label">Insights</p>
+    <nav class="sb-nav" aria-label="Insight sections">
+      <a class="sb-link" href="analytics.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></span><span class="sb-txt">Analytics</span></a>
+      <a class="sb-link" href="settings.html"><span class="sb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></span><span class="sb-txt">Settings</span></a>
+    </nav>
+
+    <div class="sb-foot">
+      <div class="sb-user">
+        <span class="avatar-fallback" data-user-initials aria-hidden="true">SK</span>
+        <span class="sb-user-txt"><b data-user-name>Manager</b><small data-user-email>you@stackly.cafe</small></span>
+      </div>
+      <button class="sb-logout" type="button" data-logout>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+        Log Out
+      </button>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <button class="sb-toggle" id="sbToggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      <div class="tb-title">
+        <h1 data-welcome>Welcome back!</h1>
+        <small>Session started <span data-session-date>—</span></small>
+      </div>
+      <div class="tb-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search orders, menu, customers…" aria-label="Search the dashboard">
+      </div>
+      <div class="tb-actions">
+        <div class="tb-notify-wrap">
+          <button class="icon-btn" id="notifyBtn" type="button" aria-expanded="false" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            <span class="dot">1</span>
+          </button>
+          <div class="notify-panel" id="notifyPanel">
+            <div class="np-head"><b>Notifications</b><button id="notifyClear" type="button">Clear all</button></div>
+            <div class="np-list" id="notifyList">
+              <div class="np-item ok"><div class="np-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg></div><p>Menu sync complete — public menu matches this list.</p><small>20 minutes ago</small></div>
+            </div>
+          </div>
+        </div>
+        <a class="tb-user" href="settings.html" aria-label="Your account settings">
+          <span class="avatar-fallback" data-user-initials aria-hidden="true">SK</span>
+          <span class="tu-txt"><b data-user-first>Manager</b><small data-user-email>you@stackly.cafe</small></span>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <div class="dash-page-head">
+        <h2>Menu Management</h2>
+        <p>Add a new item, edit the price or stock, and hide anything that has run out.</p>
+        <div class="ph-actions">
+          <button class="btn btn-primary btn-sm" type="button" data-print><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>Print Sheet</button>
+        </div>
+      </div>
+
+      <section class="dash-grid dg-12">
+
+        <!-- ===== ADD / EDIT FORM ===== -->
+        <article class="panel">
+          <div class="panel-head">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>Add Or Edit Item</h3>
+            <small>Leave the ID empty to create</small>
+          </div>
+          <div class="panel-body">
+            <form class="dash-form" id="menuAdminForm" novalidate>
+              <input type="hidden" id="miId" name="id">
+
+              <div>
+                <label class="label" for="miName">Item Name</label>
+                <input class="input" type="text" id="miName" name="name" placeholder="e.g. Hazelnut Cortado" required>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label class="label" for="miCat">Category</label>
+                  <select class="select" id="miCat" name="category">
+                    <option>Hot Coffee</option>
+                    <option>Cold Coffee</option>
+                    <option>Tea</option>
+                    <option>Snacks</option>
+                    <option>Desserts</option>
+                    <option>Breakfast</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label" for="miPrice">Price (&#8377;)</label>
+                  <input class="input" type="number" id="miPrice" name="price" min="1" step="1" placeholder="240" required>
+                </div>
+              </div>
+
+              <div>
+                <label class="label" for="miStock">Stock (portions left)</label>
+                <input class="input" type="number" id="miStock" name="stock" min="0" step="1" placeholder="25" required>
+              </div>
+
+              <div>
+                <label class="label" for="miImg">Image URL (optional)</label>
+                <input class="input" type="url" id="miImg" name="image" placeholder="https://images.unsplash.com/photo-…">
+              </div>
+
+              <div class="avatar-row" style="gap:.9rem;flex-wrap:nowrap">
+                <img id="miImgPrev" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=70" alt="Preview of the item image" width="84" height="84" style="border-radius:14px">
+                <p class="text-soft fs-sm" style="margin:0">The preview updates as you type. Leave it blank and we will use a house default.</p>
+              </div>
+
+            </form>
+          </div>
+        </article>
+
+        <!-- ===== ITEM LIST ===== -->
+        <article class="panel">
+          <div class="panel-head">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/></svg>Current Menu</h3>
+            <small data-menu-admin-count><b>6</b> items</small>
+          </div>
+          <div class="panel-body">
+            <p class="text-soft fs-sm" style="margin:0 0 1.1rem">Changes save to this browser straight away. Use the pencil to edit, the plus to toggle availability and the bin to remove an item.</p>
+            <div class="dash-grid dg-2" id="menuAdminList"></div>
+          </div>
+        </article>
+
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div class="modal-overlay" id="logoutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-logout-x aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg></div>
+    <h3 id="logoutTitle">Log out of STACKLY?</h3>
+    <p>Your session is stored only in this browser, so you will need to sign in again to reach the dashboard.</p>
+    <div class="modal-actions">
+      <button class="btn btn-outline" type="button" data-logout-cancel>Cancel</button>
+      <button class="btn btn-primary" type="button" data-logout-confirm>Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
