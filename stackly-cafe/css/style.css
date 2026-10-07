@@ -492,7 +492,8 @@ button { cursor: pointer; border: 0; background: none; }
 .custom-select-button:focus { outline: 2px solid rgba(240,134,60,.35); outline-offset: 2px; }
 .custom-select-button:disabled { opacity: .55; cursor: not-allowed; }
 .custom-select-menu {
-  display: none; position: fixed; z-index: 10000; overflow-y: auto;
+  display: none; position: absolute; top: calc(100% + 6px); left: 0; width: 100%; z-index: 10000; overflow-y: auto;
+  box-sizing: border-box;
   padding: .35rem; border: 1px solid var(--line); border-radius: var(--r-sm);
   background: #fff; box-shadow: var(--sh-xl);
 }

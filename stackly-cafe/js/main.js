@@ -142,7 +142,9 @@
       const menu = document.createElement('div');
       menu.className = 'custom-select-menu';
       menu.setAttribute('role', 'listbox');
-      document.body.appendChild(menu);
+      // Keep the menu anchored to its field so it never flips or jumps
+      // when the page scrolls or the viewport height changes.
+      shell.appendChild(menu);
 
       const sync = () => {
         const option = select.options[select.selectedIndex];
@@ -172,19 +174,11 @@
 
       function position() {
         const rect = button.getBoundingClientRect();
-        menu.style.width = `${rect.width}px`;
-        menu.style.left = `${Math.max(8, Math.min(rect.left, window.innerWidth - rect.width - 8))}px`;
         const roomBelow = window.innerHeight - rect.bottom - 8;
-        const roomAbove = rect.top - 8;
-        const openUp = roomBelow < 220 && roomAbove > roomBelow;
-        const availableRoom = Math.max(60, openUp ? roomAbove : roomBelow);
-        menu.style.maxHeight = `${Math.min(280, availableRoom)}px`;
-        const menuHeight = Math.min(280, availableRoom, menu.scrollHeight);
-        const top = openUp
-          ? Math.max(8, rect.top - menuHeight - 6)
-          : Math.min(window.innerHeight - menuHeight - 8, rect.bottom + 6);
-        menu.style.top = `${Math.max(8, top)}px`;
-        menu.style.bottom = 'auto';
+        const naturalHeight = menu.scrollHeight;
+        const availableRoom = Math.max(44, roomBelow);
+        const menuHeight = Math.min(280, availableRoom, naturalHeight);
+        menu.style.maxHeight = `${Math.max(44, menuHeight)}px`;
       }
 
       function close() {
@@ -192,8 +186,7 @@
         button.setAttribute('aria-expanded', 'false');
       }
 
-      button.addEventListener('pointerdown', (event) => {
-        event.preventDefault();
+      button.addEventListener('click', (event) => {
         event.stopPropagation();
         const opening = !menu.classList.contains('open');
         $$('.custom-select-menu.open').forEach((other) => other.classList.remove('open'));
@@ -201,15 +194,11 @@
         if (opening) {
           menu.classList.add('open');
           button.setAttribute('aria-expanded', 'true');
-          position();
+          requestAnimationFrame(position);
         } else close();
       });
-      // The pointerdown above opens the menu; keep the following click from
-      // bubbling to the document-level outside-click closer.
-      button.addEventListener('click', (event) => event.stopPropagation());
       select.addEventListener('change', sync);
       window.addEventListener('resize', () => menu.classList.contains('open') && position());
-      window.addEventListener('scroll', () => menu.classList.contains('open') && position(), true);
       sync();
     });
     document.addEventListener('click', () => {
