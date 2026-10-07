@@ -681,6 +681,15 @@
 
 /* ---------- 12. FORMS IN DASH ---------- */
 .dash-form { display: grid; gap: 1rem; }
+.dash-form .form-row > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.dash-form .form-row > div > .input,
+.dash-form .form-row > div > .custom-select-shell {
+  flex: 1 1 auto;
+}
 .settings-cols { display: grid; grid-template-columns: 240px 1fr; gap: 1.2rem; align-items: start; }
 .settings-nav { display: grid; gap: 0.2rem; }
 .settings-nav button {

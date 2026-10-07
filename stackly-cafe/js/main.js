@@ -177,8 +177,9 @@
         const roomBelow = window.innerHeight - rect.bottom - 8;
         const roomAbove = rect.top - 8;
         const openUp = roomBelow < 220 && roomAbove > roomBelow;
-        menu.style.maxHeight = `${Math.max(120, Math.min(280, openUp ? roomAbove : roomBelow))}px`;
-        const menuHeight = Math.min(280, menu.scrollHeight);
+        const availableRoom = Math.max(60, openUp ? roomAbove : roomBelow);
+        menu.style.maxHeight = `${Math.min(280, availableRoom)}px`;
+        const menuHeight = Math.min(280, availableRoom, menu.scrollHeight);
         const top = openUp
           ? Math.max(8, rect.top - menuHeight - 6)
           : Math.min(window.innerHeight - menuHeight - 8, rect.bottom + 6);
@@ -191,7 +192,8 @@
         button.setAttribute('aria-expanded', 'false');
       }
 
-      button.addEventListener('click', (event) => {
+      button.addEventListener('pointerdown', (event) => {
+        event.preventDefault();
         event.stopPropagation();
         const opening = !menu.classList.contains('open');
         $$('.custom-select-menu.open').forEach((other) => other.classList.remove('open'));
@@ -202,6 +204,9 @@
           position();
         } else close();
       });
+      // The pointerdown above opens the menu; keep the following click from
+      // bubbling to the document-level outside-click closer.
+      button.addEventListener('click', (event) => event.stopPropagation());
       select.addEventListener('change', sync);
       window.addEventListener('resize', () => menu.classList.contains('open') && position());
       window.addEventListener('scroll', () => menu.classList.contains('open') && position(), true);
@@ -538,7 +543,7 @@
       name: { el: $('#cName'), err: $('#cNameErr'), msg: 'Please tell us your name.', test: (v) => v.trim().length >= 2 },
       email: { el: $('#cEmail'), err: $('#cEmailErr'), msg: 'Enter a valid email address.', test: (v) => /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.trim()) },
       phone: { el: $('#cPhone'), err: $('#cPhoneErr'), msg: 'Enter a valid phone number.', test: (v) => v.trim() === '' || /^[+\d][\d\s\-().]{6,17}$/.test(v.trim()) },
-      subject: { el: $('#cSubject'), err: $('#cSubjectErr'), msg: 'Choose a subject.', test: (v) => v.trim().length >= 3 },
+      address: { el: $('#cAddress'), err: $('#cAddressErr'), msg: 'Enter your address.', test: (v) => v.trim().length >= 3 },
       message: { el: $('#cMessage'), err: $('#cMessageErr'), msg: 'Message should be at least 12 characters.', test: (v) => v.trim().length >= 12 }
     };
 
@@ -757,7 +762,9 @@
     guardImages();
     initNavbar();
     initMobileMenu();
-    initCustomSelects();
+    // Contact uses the plain native select for reliable browser and touch
+    // behavior. Other pages continue using the custom select control.
+    if (!$('#contactForm')) initCustomSelects();
     initModals();
     initMenuFilter();
     initLightbox();
